@@ -4,7 +4,7 @@
 #
 Name     : Keras_Applications
 Version  : 1.0.2
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/65/0b/0a81dea6236ebca5a22e1c884dff15dcc06b0a9213b67ed604117a444f69/Keras_Applications-1.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/65/0b/0a81dea6236ebca5a22e1c884dff15dcc06b0a9213b67ed604117a444f69/Keras_Applications-1.0.2.tar.gz
 Summary  : Reference implementations of popular deep learning models
@@ -14,9 +14,6 @@ Requires: Keras_Applications-python3
 Requires: Keras_Applications-python
 Requires: h5py
 Requires: numpy
-Requires: pytest
-Requires: pytest-cov
-Requires: pytest-xdist
 BuildRequires : Keras
 BuildRequires : h5py
 BuildRequires : numpy
@@ -59,7 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528335787
+export SOURCE_DATE_EPOCH=1528565908
 python3 setup.py build -b py3
 
 %install
