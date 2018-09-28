@@ -4,7 +4,7 @@
 #
 Name     : Keras_Applications
 Version  : 1.0.5
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/60/27/a25dfc6e49a6ab3de2d5f23fdb851f18d45ea9867a0955906a5c488ebbe2/Keras_Applications-1.0.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/60/27/a25dfc6e49a6ab3de2d5f23fdb851f18d45ea9867a0955906a5c488ebbe2/Keras_Applications-1.0.5.tar.gz
 Summary  : Reference implementations of popular deep learning models
@@ -28,7 +28,7 @@ Keras Applications is the `applications` module of
 %package python
 Summary: python components for the Keras_Applications package.
 Group: Default
-Requires: Keras_Applications-python3
+Requires: Keras_Applications-python3 = %{version}-%{release}
 Provides: keras_applications-python
 
 %description python
@@ -52,12 +52,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534974082
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1538151856
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
