@@ -4,7 +4,7 @@
 #
 Name     : Keras_Applications
 Version  : 1.0.6
-Release  : 13
+Release  : 14
 URL      : https://files.pythonhosted.org/packages/0c/f1/8d3dc4b770d51f0591c2913e55dd69e70c2e217835970ffa0b1acc091d8e/Keras_Applications-1.0.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0c/f1/8d3dc4b770d51f0591c2913e55dd69e70c2e217835970ffa0b1acc091d8e/Keras_Applications-1.0.6.tar.gz
 Summary  : Reference implementations of popular deep learning models
