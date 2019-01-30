@@ -1,5 +1,5 @@
 PKG_NAME := Keras_Applications
-URL = https://files.pythonhosted.org/packages/0c/f1/8d3dc4b770d51f0591c2913e55dd69e70c2e217835970ffa0b1acc091d8e/Keras_Applications-1.0.6.tar.gz
+URL = https://files.pythonhosted.org/packages/4b/93/cad07b0878d11f0b694bea0a212be789b819b30933995ef34ddc482f889e/Keras_Applications-1.0.7.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
