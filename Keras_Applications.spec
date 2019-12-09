@@ -4,7 +4,7 @@
 #
 Name     : Keras_Applications
 Version  : 1.0.8
-Release  : 20
+Release  : 21
 URL      : https://files.pythonhosted.org/packages/21/56/4bcec5a8d9503a87e58e814c4e32ac2b32c37c685672c30bc8c54c6e478a/Keras_Applications-1.0.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/56/4bcec5a8d9503a87e58e814c4e32ac2b32c37c685672c30bc8c54c6e478a/Keras_Applications-1.0.8.tar.gz
 Summary  : Reference implementations of popular deep learning models
@@ -21,8 +21,10 @@ BuildRequires : h5py
 BuildRequires : numpy
 
 %description
-# Keras Applications
-[![Build Status](https://travis-ci.org/keras-team/keras-applications.svg?branch=master)](https://travis-ci.org/keras-team/keras-applications)
+Keras Applications is the `applications` module of
+        the Keras deep learning library.
+        It provides model definitions and pre-trained weights for a number
+        of popular archictures, such as VGG16, ResNet50, Xception, MobileNet, and more.
 
 %package license
 Summary: license components for the Keras_Applications package.
@@ -53,13 +55,15 @@ python3 components for the Keras_Applications package.
 
 %prep
 %setup -q -n Keras_Applications-1.0.8
+cd %{_builddir}/Keras_Applications-1.0.8
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559251788
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1575935485
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -74,7 +78,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/Keras_Applications
-cp LICENSE %{buildroot}/usr/share/package-licenses/Keras_Applications/LICENSE
+cp %{_builddir}/Keras_Applications-1.0.8/LICENSE %{buildroot}/usr/share/package-licenses/Keras_Applications/7c954fae65e0681b759aabac09a14c2876a9bba8
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -85,7 +89,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/Keras_Applications/LICENSE
+/usr/share/package-licenses/Keras_Applications/7c954fae65e0681b759aabac09a14c2876a9bba8
 
 %files python
 %defattr(-,root,root,-)
