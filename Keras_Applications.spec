@@ -4,7 +4,7 @@
 #
 Name     : Keras_Applications
 Version  : 1.0.8
-Release  : 22
+Release  : 23
 URL      : https://files.pythonhosted.org/packages/21/56/4bcec5a8d9503a87e58e814c4e32ac2b32c37c685672c30bc8c54c6e478a/Keras_Applications-1.0.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/56/4bcec5a8d9503a87e58e814c4e32ac2b32c37c685672c30bc8c54c6e478a/Keras_Applications-1.0.8.tar.gz
 Summary  : Reference implementations of popular deep learning models
@@ -22,9 +22,21 @@ BuildRequires : numpy
 
 %description
 Keras Applications is the `applications` module of
-        the Keras deep learning library.
-        It provides model definitions and pre-trained weights for a number
-        of popular archictures, such as VGG16, ResNet50, Xception, MobileNet, and more.
+the Keras deep learning library.
+It provides model definitions and pre-trained weights for a number
+of popular archictures, such as VGG16, ResNet50, Xception, MobileNet, and more.
+
+Read the documentation at: https://keras.io/applications/
+
+Keras Applications may be imported directly
+from an up-to-date installation of Keras:
+
+```
+from keras import applications
+```
+
+Keras Applications is compatible with Python 2.7-3.6
+and is distributed under the MIT license.
 
 %package license
 Summary: license components for the Keras_Applications package.
@@ -48,6 +60,7 @@ python components for the Keras_Applications package.
 Summary: python3 components for the Keras_Applications package.
 Group: Default
 Requires: python3-core
+Provides: pypi(Keras-Applications)
 
 %description python3
 python3 components for the Keras_Applications package.
@@ -62,7 +75,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575935485
+export SOURCE_DATE_EPOCH=1583164099
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
